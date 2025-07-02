@@ -6,13 +6,13 @@ using namespace std;
 struct Nodo
 {
     
-    char letra;
+    string letra;
     Nodo*siguiente;
     Nodo*atras;
 
 };
 
-void InsertarLetra(Nodo*&lista,char c)
+void InsertarLetra(Nodo*&lista,string c)
 {
 
     Nodo*nueva_letra=new Nodo();
@@ -45,7 +45,7 @@ bool EsPalindromooo(Nodo*lista)
 
     Nodo*inicio=lista;
     Nodo*fin=lista->atras;
-    
+
     while(inicio!=fin&&inicio->siguiente!=fin)
     {
         
@@ -76,37 +76,29 @@ void MostrarLista(Nodo*lista)
         actual=actual->siguiente;
 
     } while (actual!=lista);
-    cout<<"(inicio)\n";
+    cout<<"nullptr";
     
 
 }
+
 
 int main()
 {
 
     Nodo*lista=nullptr;
     string palabra;
-    cout<<"Ingrese una palabra: ";
-    cin>>palabra;
+    int n;
 
-    for(char c:palabra)
+    cout<<"Ingrese la cantidad de palabras a ingresar: ";
+    cin>>n;
+    for(int i=0;i<n;i++)
     {
 
-        InsertarLetra(lista,c);
+        cout<<"Palabra "<<i<<": ";
+        cin>>palabra;
 
     }
 
     MostrarLista(lista);
-
-    if(EsPalindromooo(lista))
-    {
-
-        cout<<"\nLa palabra "<<palabra<<" ES PALINDROMO\n";
-
-    }else{
-
-        cout<<"\nLa palabra "<<palabra<<" NO ES UN PALINDROMO\n";
-
-    }
 
 }
