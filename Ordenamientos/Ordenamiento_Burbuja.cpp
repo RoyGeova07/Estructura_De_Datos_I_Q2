@@ -7,7 +7,7 @@ using namespace std;
 //revisar varias veces toda la lista hasta que no se necesiten mas intercamiarlos, lo cual significa 
 //que la lista esta ordenada
 
-//hace que los numeros mas livianos, suban hasta arriba como una busbuja en una gaseosa 
+//hhace que los numeros mas livianos, suban hasta arriba como una busbuja en una gaseosa 
 
 int main(){
 
